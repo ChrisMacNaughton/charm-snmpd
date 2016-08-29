@@ -1,14 +1,18 @@
 options:
-  string-option:
-    type: string
-    default: "Default Value"
-    description: "A short description of the configuration option"
-  boolean-option:
-    type: boolean
-    default: False
-    description: "A short description of the configuration option"
-  int-option:
-    type: int
-    default: 9001
-    description: "A short description of the configuration option"
+    sysLocation:
+        type: string
+        default: "undermydesk"
+        description: "Sets the SNMP sysLocation variable"
+    sysContact:
+        type: string
+        default: "John Doe <john.doe@example.org>"
+        description: "The owner of the machine in question, SNMP sysContact variable"
+    acls:
+        type: string
+        default: "rocommunity public localhost"
+        description: "Multi-line string that contains ACL's, will be copied directly into the snmpd configuration file."
+    other:
+        type: string
+        default: ""
+        description: "Multi-line string containing other valid snmpd.conf statements that are appended to the configuration file."
 
