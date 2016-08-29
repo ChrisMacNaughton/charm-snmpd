@@ -4,19 +4,12 @@ maintainer: Bert JW Regeer <Bert.JW.Regeer@playground>
 description: |
   The Simple Network Management Protocol (SNMP) provides a framework for
   the exchange of management information between agents (servers) and
-  clients.  The Net-SNMP agent is a daemon which listens for incoming
+  clients. The Net-SNMP agent is a daemon which listens for incoming
   SNMP requests from clients and provides responses.
 tags:
-  # Replace "misc" with one or more whitelisted tags from this list:
-  # https://jujucharms.com/docs/stable/authors-charm-metadata
-  - misc
+  - ops
+  - monitoring
+  - performance
+  - network
 subordinate: false
-provides:
-  provides-relation:
-    interface: interface-name
-requires:
-  requires-relation:
-    interface: interface-name
-peers:
-  peer-relation:
-    interface: interface-name
+series: xenial
