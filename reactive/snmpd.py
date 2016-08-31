@@ -10,6 +10,7 @@ from charms.templating.jinja2 import render
 
 from charmhelpers.core import hookenv
 from charmhelpers.core.hookenv import status_set
+from charmhelpers.core.services.base import service_restart
 
 SNMPD_CONF = '/etc/snmp/snmpd.conf'
 
@@ -47,5 +48,5 @@ def update_snmpd_conf():
 
 @when_file_changed('/etc/snmp/snmpd.conf', hash_type='sha256')
 def config_file_updated():
-    hookenv.service_restart('snmpd')
+    service_restart('snmpd')
     status_set('active', 'snmpd has been installed and re-configured.')
