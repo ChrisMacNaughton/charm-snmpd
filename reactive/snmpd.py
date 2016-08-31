@@ -20,10 +20,6 @@ def install_snmpd():
     status_set('maintenance', 'Queued installation of snmpd.')
 
 @when('apt.installed.snmpd')
-def snmpd_installed():
-    status_set('maintenance', 'snmpd has been installed.')
-
-@when('apt.installed.snmpd')
 @when('config.changed')
 def update_snmpd_conf():
     config = hookenv.config()
