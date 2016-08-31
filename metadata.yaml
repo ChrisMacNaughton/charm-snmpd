@@ -12,4 +12,5 @@ tags:
   - performance
   - network
 subordinate: false
-series: xenial
+series:
+  - xenial
