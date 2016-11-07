@@ -6,12 +6,15 @@ This charm is used to install/configure the SNMPD daemon.
 Usage
 ~~~~~
 
-Step by step instructions on using the charm:
+How to use this Charm:
 
 .. code::
 
-   juju deploy snmpd
+   juju deploy cs:~bertjwregeer/snmpd
+   juju add-relation othercharm snmpd
 
+This will deploy the Charm and make it a sub-ordinate to any other charm. This
+will make sure that it is deployed alongside the parent charm at all times.
 
 Configuration may be updated using the JuJu charm configuration variables. This
 will automatically update the snmpd.conf and restart snmpd as required.
