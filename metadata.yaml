@@ -11,6 +11,10 @@ tags:
   - monitoring
   - performance
   - network
-subordinate: false
+subordinate: true
 series:
   - xenial
+requires:
+  host-system:
+    interface: juju-info
+    scope: container
