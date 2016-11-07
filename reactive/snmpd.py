@@ -1,5 +1,6 @@
 from charms.reactive import (
     when,
+    when_any,
     when_not,
     when_file_changed,
 )
@@ -46,3 +47,7 @@ def update_snmpd_conf():
 def config_file_updated():
     service_restart('snmpd')
     status_set('active', 'snmpd has been installed and re-configured.')
+
+@when_any('host-system.available', 'host-system.connected')
+def host_available():
+    pass
