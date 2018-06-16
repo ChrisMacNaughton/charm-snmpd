@@ -14,6 +14,7 @@ tags:
 subordinate: true
 series:
   - xenial
+  - bionic
 requires:
   host-system:
     interface: juju-info
