@@ -2,8 +2,17 @@
 
 import unittest
 import zaza.model
-import zaza.utilities.juju as juju_utils
-from pysnmp.hlapi import *
+from pysnmp.hlapi import (
+    SnmpEngine,
+    next,
+    getCmd,
+    CommunityData,
+    UdpTransportTarget,
+    ContextData,
+    ObjectType,
+    ObjectIdentity,
+)
+
 
 class BasicTest(unittest.TestCase):
     def test_snmp_works(self):
