@@ -1,0 +1,17 @@
+charm_name: snmpd
+gate_bundles:
+- xenial
+- bionic
+- cosmic
+- disco
+smoke_bundles:
+- bionic
+comment:
+dev_bundles: []
+# target_deploy_status:
+#   octavia:
+#     workload-status: blocked
+#     workload-status-message: Awaiting
+configure: []
+
+tests: []

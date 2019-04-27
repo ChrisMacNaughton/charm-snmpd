@@ -1,0 +1,4 @@
+# Build requirements
+vergit>=1.0.0,<2.0.0 # Needed for the latest charm-tools
+-e git+https://github.com/juju/charm-tools.git#egg=charm-tools
+simplejson

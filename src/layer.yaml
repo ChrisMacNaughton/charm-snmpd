@@ -1,3 +1,3 @@
 includes: ['layer:basic', 'layer:apt', 'interface:juju-info']
 #ignore: ['README.md']
-repo: https://github.com/KingJ/juju_snmpd/
+repo: https://github.com/chrismacnaughton/charm-snmpd

@@ -1,0 +1,13 @@
+series: xenial
+
+applications:
+  ubuntu:
+    charm: cs:ubuntu
+    num_units: 1
+  snmpd:
+    series: xenial
+    charm: ../../../snmpd
+
+relations:
+  - - ubuntu
+    - snmpd
