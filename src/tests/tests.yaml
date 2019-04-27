@@ -1,17 +1,10 @@
 charm_name: snmpd
 gate_bundles:
-- xenial
-- bionic
-- cosmic
-- disco
+- snmpd
 smoke_bundles:
-- bionic
+- snmpd
 comment:
 dev_bundles: []
-target_deploy_status:
-  snmpd:
-    workload-status: active
-    workload-status-message: snmpd has been installed and re-configured.
 configure:
   - zaza.charm_tests.noop.setup.basic_setup
 tests:
