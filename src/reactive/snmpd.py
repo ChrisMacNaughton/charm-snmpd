@@ -41,7 +41,8 @@ def update_snmpd_conf():
         owner='root',
         group='root'
     )
-
+    hookenv.open_port(161, protocol='UDP')
+    hookenv.open_port(162, protocol='UDP')
     status_set('active', 'snmpd has been installed and re-configured.')
 
 

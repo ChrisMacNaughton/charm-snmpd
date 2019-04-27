@@ -7,6 +7,10 @@ applications:
   snmpd:
     series: bionic
     charm: ../../../snmpd
+    expose: true
+    options:
+      acls: |
+        rocommunity public default
 
 relations:
   - - ubuntu
