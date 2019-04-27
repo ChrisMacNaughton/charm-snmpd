@@ -4,7 +4,6 @@ import unittest
 import zaza.model
 from pysnmp.hlapi import (
     SnmpEngine,
-    next,
     getCmd,
     CommunityData,
     UdpTransportTarget,
