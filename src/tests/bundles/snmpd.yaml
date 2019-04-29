@@ -1,0 +1,56 @@
+series: xenial
+applications:
+  ubuntu-xenial:
+    series: xenial
+    charm: cs:~chris.macnaughton/ubuntu
+    num_units: 1
+  snmpd-xenial:
+    series: xenial
+    charm: ../../../snmpd
+    expose: true
+    options:
+      acls: |
+        rocommunity public default
+  ubuntu-bionic:
+    series: bionic
+    charm: cs:~chris.macnaughton/ubuntu
+    num_units: 1
+  snmpd-bionic:
+    series: bionic
+    charm: ../../../snmpd
+    expose: true
+    options:
+      acls: |
+        rocommunity public default
+  ubuntu-cosmic:
+    series: cosmic
+    charm: cs:~chris.macnaughton/ubuntu
+    num_units: 1
+  snmpd-cosmic:
+    series: cosmic
+    charm: ../../../snmpd
+    expose: true
+    options:
+      acls: |
+        rocommunity public default
+  ubuntu-disco:
+    series: disco
+    charm: cs:~chris.macnaughton/ubuntu
+    num_units: 1
+  snmpd-disco:
+    series: disco
+    charm: ../../../snmpd
+    expose: true
+    options:
+      acls: |
+        rocommunity public default
+
+relations:
+  - - ubuntu-xenial
+    - snmpd-xenial
+  - - ubuntu-bionic
+    - snmpd-bionic
+  - - ubuntu-cosmic
+    - snmpd-cosmic
+  - - ubuntu-disco
+    - snmpd-disco

@@ -43,13 +43,15 @@ def update_snmpd_conf():
     )
     hookenv.open_port(161, protocol='UDP')
     hookenv.open_port(162, protocol='UDP')
-    status_set('active', 'snmpd has been installed and re-configured.')
+    status_set('active', 'Unit is ready: '
+                         'snmpd has been installed and re-configured.')
 
 
 @when_file_changed('/etc/snmp/snmpd.conf', hash_type='sha256')
 def config_file_updated():
     service_restart('snmpd')
-    status_set('active', 'snmpd has been installed and re-configured.')
+    status_set('active', 'Unit is ready: '
+                         'snmpd has been installed and re-configured.')
 
 
 @when_any('host-system.available', 'host-system.connected')
